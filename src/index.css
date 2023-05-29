@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input[type="text"],input[type="password"],input[type="email"],input[type="search"],textarea{
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  box-shadow: 0 2px 10px 4px rgb(0 0 0/10%);
+  @apply w-[100%] max-w-[100%] outline-none px-[12px] py-[10px] rounded-[6px] text-[15px];
+}
+
+.cs_shd{
+  box-shadow: 0 2px 10px 4px rgb(0 0 0/10%);
 }
