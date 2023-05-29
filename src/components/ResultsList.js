@@ -1,10 +1,10 @@
-import axios from "axios";
+import axios from "../axios/axios";
 import { useEffect, useState } from "react";
 
 const ResultsList = () => {
     const [results,setResults] = useState(null);
     const getResults = async() => {
-        const resp = await axios.get('http://localhost:3001/api/demo');
+        const resp = await axios.get('/api/demo');
         setResults(resp.data);
     }
     useEffect(()=>{

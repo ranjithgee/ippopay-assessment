@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "../axios/axios";
 import { useState } from "react";
 import strongPasswordChecker from "../functions/strongPasswordChecker";
 import { toast } from "react-toastify";
@@ -12,7 +12,7 @@ const Home = () => {
         const errCount = strongPasswordChecker(password);
         setResult(errCount);
         toast.info(`Input: ${password} && Output: ${errCount}`);
-        const resp = await axios.post('http://localhost:3001/api/demo',{
+        const resp = await axios.post('/api/demo',{
             password:password,
             result:errCount
         }).then((res)=>{
